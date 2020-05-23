@@ -12,6 +12,23 @@ header {
     grid-area: header;
     background: #7477BF;
 }
+header h1 {
+    margin-left: 10px;
+    float: left;
+}
+.bell {
+    height: 30px;
+    width: 30px;
+}
+/* .notifyBell {
+    margin-left: 120px;
+} */
+.profileInfo {
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+    float: right;
+}
 nav {
     grid-area: nav;
     background: #4D4C71;
@@ -21,6 +38,17 @@ main {
     grid-area: main;
     background: white;
 }
+.verticalLine {
+    height: 30px;
+    border-left: 1px black solid;
+    margin: 0 20px;
+}
+.profileImage {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
 
 @media (min-width: 768px) {
     grid-template-rows: 70px 50px 1fr;
