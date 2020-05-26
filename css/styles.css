@@ -1,4 +1,4 @@
-body {
+.gridContainer {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr;
@@ -32,6 +32,14 @@ header h1 {
 nav {
     grid-area: nav;
     background: #4D4C71;
+    display: flex;
+    align-content: center;
+}
+
+nav img {
+    height: 30px;
+    width: 30px;
+    margin: 15px auto;
 }
 
 main {
@@ -51,14 +59,19 @@ main {
   }
 
 @media (min-width: 768px) {
+    .gridContainer {
     grid-template-rows: 70px 50px 1fr;
+    }
 }
 @media (min-width: 1024px){
-    body {
+    .gridContainer {
         grid-template-columns: 60px 1fr;
         grid-template-rows: 60px 1fr;
         grid-template-areas: 
         "header header"
         "nav main";
+    }
+    nav {
+        flex-direction: column;
     }
 }
