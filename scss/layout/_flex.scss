@@ -1,0 +1,17 @@
+header,
+.profileInfo,
+.headerSearch {
+    display: flex;
+}
+header {
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+}
+
+.profileInfo {
+    align-items: center;
+}
+.headerSearch {
+    justify-content: flex-end;
+}
