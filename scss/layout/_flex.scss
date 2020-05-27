@@ -1,6 +1,10 @@
 header,
 .profileInfo,
-.headerSearch {
+.headerSearch,
+.trafficNav,
+.icon,
+.social,
+.alertBar {
     display: flex;
 }
 header {
@@ -12,6 +16,24 @@ header {
 .profileInfo {
     align-items: center;
 }
-.headerSearch {
+.headerSearch,
+.trafficNav {
     justify-content: flex-end;
+}
+
+.icon {
+    align-items: center;
+    justify-content: center;
+}
+.daily {
+    grid-area: daily;
+}
+.mobile {
+    grid-area: mobile;
+}
+.social {
+    flex-direction: row;
+}
+.alertBar {
+    justify-content: space-between;
 }

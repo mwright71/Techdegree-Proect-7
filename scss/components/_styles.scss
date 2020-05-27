@@ -8,6 +8,7 @@ header {
 header h1 {
     margin-left: 10px;
     color: white;
+    font-size: 24px;
 
 }
 
@@ -54,4 +55,43 @@ nav img {
     height: 35px;
     border: 1px solid #e3e3e3;
     border-radius: 5px; 
+}
+.search::placeholder {
+    font-style: italic;
+    font-size: 18px;
+    padding: 10px;
+}
+.trafficNav li {
+    list-style-type: none;
+    margin: 10px;
+}
+.widgetContainerFull {
+    width: 95vw;
+}
+.widgetContainerFull {
+    width: 95vw;
+    @media (min-width: 768px){
+        width: 45vw;
+    }
+}
+
+.icon {
+    fill: white;
+    background-color: $main;
+    padding: 15px;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+}
+.alertBar {
+    background-color: $main;
+    margin: 0 auto ;
+    margin-top: 15px;
+    width: 85%;
+    border-radius: 5px;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 18px;
 }
