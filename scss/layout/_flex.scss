@@ -3,8 +3,11 @@ header,
 .headerSearch,
 .trafficNav,
 .icon,
-.social,
-.alertBar {
+.alertBar,
+.socialContainer,
+.socialBox,
+.membersContainer,
+.memberInfo {
     display: flex;
 }
 header {
@@ -21,7 +24,8 @@ header {
     justify-content: flex-end;
 }
 
-.icon {
+.icon,
+.socialBox {
     align-items: center;
     justify-content: center;
 }
@@ -31,9 +35,23 @@ header {
 .mobile {
     grid-area: mobile;
 }
-.social {
-    flex-direction: row;
-}
 .alertBar {
     justify-content: space-between;
+}
+.socialContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 768px){
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.membersContainer {
+    justify-content: space-between;
+}
+.memberInfo {
+    // width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
 }

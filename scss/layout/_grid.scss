@@ -3,7 +3,9 @@ main,
 nav,
 .dashTop,
 .traffic,
-.trafficHeader {
+.trafficHeader,
+.social,
+.membersArea {
     display: grid;
 }
 header {
@@ -45,8 +47,7 @@ main {
         "trafficmain trafficmain"
         "daily mobile"
         "social social"
-        "members activity"
-        "message settings";
+        "members members";
     }
 }
 .gridContainer {
@@ -66,7 +67,12 @@ main {
     }
     
 }
-
+.social {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "social"
+    "socialbox";
+}
 
 
 .headline {
@@ -119,6 +125,9 @@ main {
 .social {
     grid-area: social;
 }
+.socialContainer {
+    grid-area: socialbox;
+}
 
 .socialImage{
     grid-area: siteicon;
@@ -126,15 +135,26 @@ main {
 .socialText {
     grid-area: siteinfo;
 }
-.members {
+.membersArea {
     grid-area: members;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    grid-template-areas:
+    "members1"
+    "members2"
+    "members3"
+    "members4";
+}
+.members {
+    grid-area: members1;
 }
 .activity {
-    grid-area: activity;
+    grid-area: members2;
 }
 .message{
-    grid-area: message;
+    grid-area: members3;
 }
 .settings {
-    grid-area: settings;
+    grid-area: members4;
 }

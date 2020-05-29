@@ -342,7 +342,9 @@ main,
 nav,
 .dashTop,
 .traffic,
-.trafficHeader {
+.trafficHeader,
+.social,
+.membersArea {
   display: grid;
 }
 
@@ -374,7 +376,7 @@ main {
 @media (min-width: 768px) {
   main {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "dashtop dashtop" "alertbar alertbar" "trafficmain trafficmain" "daily mobile" "social social" "members activity" "message settings";
+    grid-template-areas: "dashtop dashtop" "alertbar alertbar" "trafficmain trafficmain" "daily mobile" "social social" "members members";
   }
 }
 
@@ -389,6 +391,11 @@ main {
     grid-template-rows: 60px 1fr;
     grid-template-areas: "header header" "nav main";
   }
+}
+
+.social {
+  grid-template-columns: 1fr;
+  grid-template-areas: "social" "socialbox";
 }
 
 .headline {
@@ -448,6 +455,10 @@ main {
   grid-area: social;
 }
 
+.socialContainer {
+  grid-area: socialbox;
+}
+
 .socialImage {
   grid-area: siteicon;
 }
@@ -456,20 +467,28 @@ main {
   grid-area: siteinfo;
 }
 
-.members {
+.membersArea {
   grid-area: members;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  grid-template-areas: "members1" "members2" "members3" "members4";
+}
+
+.members {
+  grid-area: members1;
 }
 
 .activity {
-  grid-area: activity;
+  grid-area: members2;
 }
 
 .message {
-  grid-area: message;
+  grid-area: members3;
 }
 
 .settings {
-  grid-area: settings;
+  grid-area: members4;
 }
 
 header,
@@ -477,8 +496,11 @@ header,
 .headerSearch,
 .trafficNav,
 .icon,
-.social,
-.alertBar {
+.alertBar,
+.socialContainer,
+.socialBox,
+.membersContainer,
+.memberInfo {
   display: flex;
 }
 
@@ -497,7 +519,8 @@ header {
   justify-content: flex-end;
 }
 
-.icon {
+.icon,
+.socialBox {
   align-items: center;
   justify-content: center;
 }
@@ -510,12 +533,33 @@ header {
   grid-area: mobile;
 }
 
-.social {
-  flex-direction: row;
-}
-
 .alertBar {
   justify-content: space-between;
+}
+
+.socialContainer {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .socialContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.membersContainer {
+  justify-content: space-between;
+}
+
+.memberInfo {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -526,6 +570,21 @@ header h1 {
   margin-left: 10px;
   color: white;
   font-size: 24px;
+}
+
+h3 {
+  margin: 15px;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 nav {
@@ -593,23 +652,36 @@ nav img {
   width: 95vw;
 }
 
-.widgetContainerFull {
+.widgetContainerHalf {
   width: 95vw;
 }
 @media (min-width: 768px) {
-  .widgetContainerFull {
+  .widgetContainerHalf {
     width: 45vw;
   }
 }
 
 .icon {
   fill: white;
-  background-color: #7477bf;
-  padding: 15px;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  margin-bottom: 10px;
+  padding: 5px;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+  text-align: center;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+@media (min-width: 768px) {
+  .icon {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media (min-width: 768px) {
+  .icon {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .alertBar {
@@ -622,6 +694,62 @@ nav img {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 18px;
+}
+
+.socialBox {
+  background-color: #fbfbfb;
+  width: 70%;
+  border: 1px solid #7477bf;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.socialText {
+  line-height: 0.3px;
+  margin-left: 15px;
+}
+
+.socialText h4 {
+  color: #7477bf;
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .socialText h4 {
+    font-size: 1.8rem;
+  }
+}
+
+.socialText p {
+  color: brown;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .socialText p {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .socialText p {
+    font-size: 4rem;
+  }
+}
+
+.socialImage {
+  border-radius: 50%;
+  background-color: #7477bf;
+  margin: 15px;
+}
+
+.members {
+  width: 95%;
+}
+
+.memberImage {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: auto;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

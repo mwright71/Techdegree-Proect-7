@@ -1,7 +1,9 @@
 $main: #7477bf;
 $nav: #4d4c72;
 $main-background: #fbfbfb;
-
+body {
+    font-family: 'Roboto', sans-serif;
+}
 header {
     background-color: $main;
 }
@@ -10,6 +12,16 @@ header h1 {
     color: white;
     font-size: 24px;
 
+}
+h3 {
+    margin: 15px;
+    font-size: 1rem;
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+        font-size: 2rem;
+    }
 }
 
 nav {
@@ -68,7 +80,7 @@ nav img {
 .widgetContainerFull {
     width: 95vw;
 }
-.widgetContainerFull {
+.widgetContainerHalf {
     width: 95vw;
     @media (min-width: 768px){
         width: 45vw;
@@ -77,13 +89,23 @@ nav img {
 
 .icon {
     fill: white;
-    background-color: $main;
-    padding: 15px;
-    border-radius: 50%;
-    width: 55px;
-    height: 55px;
-    margin-bottom: 10px;
+    padding: 5px;
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+    text-align: center;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    @media (min-width: 768px) {
+        width: 65px;
+        height: 65px;
+    }
+    @media (min-width: 768px) {
+        width: 75px;
+        height: 75px;
+    }
 }
+
 .alertBar {
     background-color: $main;
     margin: 0 auto ;
@@ -94,4 +116,49 @@ nav img {
     padding-left: 30px;
     padding-right: 30px;
     font-size: 18px;
+}
+.socialBox {
+    background-color: $main-background;
+    width: 70%;
+    border: 1px solid $main;
+    border-radius: 5px;
+    margin: 15px;
+}
+.socialText {
+    line-height: .3px;
+    margin-left: 15px;
+
+}
+.socialText h4 {
+    color: $main;
+    font-size: 1.2rem;
+    @media (min-width: 768px){
+        font-size: 1.8rem;
+    }
+}
+.socialText p {
+    color: brown;
+    font-size: 1.5rem;
+    @media (min-width: 768px){
+        font-size: 2.5rem;
+    }
+    @media (min-width: 1024px){
+        font-size: 4rem;
+    }
+}
+.socialImage {
+    border-radius: 50%;
+    background-color: $main;
+
+    margin: 15px;
+}
+.members {
+    width: 95%;
+}
+.memberImage {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    padding-right: 10px;
 }
