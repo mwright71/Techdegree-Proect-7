@@ -7,7 +7,18 @@ header,
 .socialContainer,
 .socialBox,
 .membersContainer,
-.memberInfo {
+.memberInfo,
+.members,
+.activity,
+.activityContainer,
+.activityInfo,
+.settingsToggle,
+.settings,
+.message,
+.widgetContainer,
+.settingsItem,
+.emailItem,
+.profileItem {
     display: flex;
 }
 header {
@@ -50,8 +61,21 @@ header {
 .membersContainer {
     justify-content: space-between;
 }
-.memberInfo {
+.memberInfo,
+.activityInfo {
     // width: 100%;
     flex-direction: row;
     justify-content: flex-start;
+}
+.members,
+.activity,
+.message,
+.settingsToggle,
+.settings,
+.settingsItem,
+.widgetContainer {
+    flex-direction: column;
+}
+.settingsItem {
+    align-content: flex-start;
 }

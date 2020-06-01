@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>YourApp Dashboard</title>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -13,9 +13,21 @@
                 <h1><strong>Your</strong>App&#153</h1>
                 <section class="profileInfo">
                     <div class="notifyBell">
-                        <div class="alert-dot"></div>
                         <div class="bell">
-                            <img src="icons/icon-bell.svg" alt="notification bell">
+                            <svg version="1.1" class="iconBell" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                        <style type="text/css">
+                           .st0{fill:#FFFFFF;}
+                        </style>
+                         <g id="_x36__6_">
+                           <g>
+                               <path class="st0" d="M24,18v-8c0-5.5-4.5-10-10-10S4,4.5,4,10v8l-4,8h9.1c0.5,2.3,2.5,4,4.9,4s4.4-1.7,4.9-4H28L24,18z M14,28
+                                   c-1.3,0-2.4-0.8-2.8-2h5.6C16.4,27.2,15.3,28,14,28z M3,24l3-6v-8c0-4.4,3.6-8,8-8s8,3.6,8,8v8l3,6H3z"/>
+                           </g>
+                       </g>
+                       </svg>
+                            <div class="ping-dot"></div>
+                            <ul class="notifications"></ul>
                         </div>
                     </div>
                     <div class="verticalLine"></div>
@@ -41,28 +53,30 @@
             </nav>
             <main>
                 <!-- /dash-top -->
-                <div class="dashTop" id="dashboard">
+                <div class="dashTop white" id="dashboard">
                     <h2 class="headline">Dashboard</h2>
                     <div class="headerSearch">
                         <input class="search" type="search" placeholder="Search..."/>
                     </div>
+                    
                 </div> 
 
                 <!-- Alert Bar -->
-                <div class="alertBar" id="alert">
+                <div class="alert white">
+                <div class="alertBar" id="alert"></div>
 
                 </div>
 
                 <!-- Line graphs charts -->
-                <section class="traffic">
+                <section class="traffic white">
                     <div class="trafficHeader">
                         <h3>Traffic</h3>
-                        <ul class="trafficNav">
-                            <li class="trafficLinkNav">Hourly</li>
-                            <li class="trafficLinkNav">Daily</li>
-                            <li class="trafficLinkNav">Weekly</li>
-                            <li class="trafficLinkNav">Monthly</li>
-                        </ul>
+                        <div class="trafficNav">
+                            <button type="submit" name="timeframe" id="hourly" class="timeFrame">Hourly</button>
+                            <button type="submit" name="timeframe" id="daily" class="timeFrame">Daily</button>
+                            <button type="submit" name="timeframe" id="weekly" class="timeFrame">Weekly</button>
+                            <button type="submit" name="timeframe" id="monthly" class="timeFrame">Monthly</button>
+                        </div>
                     </div>
                     <div class="widgetContainerFull">
                         <canvas id="trafficChart"></canvas>
@@ -70,14 +84,14 @@
                 </section>
                 <section class="halfCharts">
                     <!-- Graph Chart --></section>
-                    <div class="daily">
+                    <div class="daily white">
                         <h3>Daily Traffic</h3>
                         <div class="widgetContainerHalf">
                             <canvas id="dailyChart"></canvas>
                         </div>
                     </div>
                     <!-- Donut chart -->
-                    <div class="mobile">
+                    <div class="mobile white">
                         <h3>Mobile Users</h3>
                         <div class="widgetContainerHalf">
                             <canvas id="mobileChart"></canvas>
@@ -85,7 +99,7 @@
                     </div>
                 </section>
                 <!-- Social section -->
-                <section class="social">
+                <section class="social white">
                     <h3>Social Stats</h3>
                     <div class="socialContainer">
                         <div class="socialBox">
@@ -139,11 +153,11 @@
                 </section>
                 <!-- Members area -->
                 <section class="membersArea">
-                    <div class="members">
+                    <div class="members white">
                         <h3>New Members</h3>
-                        <div class="membersContainer">
+                        <div class="membersContainer first">
                             <div class="memberInfo">
-                                <img class="memberImage" src="images/member-1.jpg" class="profileImage" alt="Victoria Chabers Profile image">
+                                <img class="memberImage" src="images/member-1.jpg" alt="Victoria Chabers Profile image">
                                 <div class="membersText">
                                     <p>Victoria Chambers</p>
                                     <a href="#">victoria.chambers80@example.com</a>
@@ -153,7 +167,7 @@
                         </div>
                         <div class="membersContainer">
                             <div class="memberInfo">
-                                <img class="memberImage" src="images/member-2.jpg" class="profileImage" alt="Dale Byrd Profile image">
+                                <img class="memberImage" src="images/member-2.jpg"alt="Dale Byrd Profile image">
                                 <div class="membersText">
                                     <p>Dale Bryd</p>
                                     <a href="#">dale.bryd52@example.com</a>
@@ -163,7 +177,7 @@
                         </div>
                         <div class="membersContainer">
                             <div class="memberInfo">
-                                <img class="memberImage" src="images/member-3.jpg" class="profileImage" alt="Dawn Wood Profile image">
+                                <img class="memberImage" src="images/member-3.jpg" alt="Dawn Wood Profile image">
                                 <div class="membersText">
                                     <p>Dawn Wood</p>
                                     <a href="#">dawn.wood16@example.com</a>
@@ -173,7 +187,7 @@
                         </div>
                         <div class="membersContainer">
                             <div class="memberInfo">
-                                <img class="memberImage" src="images/member-4.jpg" class="profileImage" alt="Dan Oliver Profile image">
+                                <img class="memberImage" src="images/member-4.jpg" alt="Dan Oliver Profile image">
                                 <div class="membersText">
                                     <p>Dan Oliver</p>
                                     <a href="#">dan.oliver82@example.com</a>
@@ -183,70 +197,84 @@
                         </div>
                     </div>
                     <!-- Recent Activity -->
-                    <section class="activity">
+                    <section class="activity white">
                         <h3>Recent Activity</h3>
-                        <div class="activityContainer">
-                            <img src="images/member-1.jpg" class="profileImage" alt="Victoria Chabers Profile image">
-                            <div class="activityText">
-                                <p>Victoria Chambers commented on YourApp's SEO tips</p>
-                                <p>4 hours ago</p>
+                        <div class="activityContainer first">
+                            <div class="activityInfo">
+                                <img src="images/member-1.jpg" class="memberImage" alt="Victoria Chabers Profile image">
+                                <div class="activityText">
+                                    <p>Victoria Chambers commented on YourApp's SEO tips</p>
+                                    <p>4 hours ago</p>
+                                </div>
                             </div>
                         </div>
                         <div class="activityContainer">
-                            <img src="images/member-2.jpg" class="profileImage" alt="Dale Byrd Profile image">
-                            <div class="activityText">
-                                <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
-                                <p>5 hours ago</p>
+                            <div class="activityInfo">
+                                <img src="images/member-2.jpg" class="memberImage" alt="Dale Byrd Profile image">
+                                <div class="activityText">
+                                    <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
+                                    <p>5 hours ago</p>
+                                </div>
                             </div>
                         </div>
                         <div class="activityContainer">
-                            <img src="images/member-3.jpg" class="profileImage" alt="Dawn Wood Profile image">
-                            <div class="activityText">
-                                <p>Dawn Wood commented on Facebook's Changes for 2016</p>
-                                <p>5 hours ago</p>
+                            <div class="activityInfo">
+                                <img src="images/member-3.jpg" class="memberImage" alt="Dawn Wood Profile image">
+                                <div class="activityText">
+                                    <p>Dawn Wood commented on Facebook's Changes for 2016</p>
+                                    <p>5 hours ago</p>
+                                </div>
                             </div>
                         </div>
                         <div class="activityContainer">
-                            <img src="images/member-4.jpg" class="profileImage" alt="Dan Oliver Profile image">
-                            <div class="activityText">
-                                <p>Dan Oliver posted YourApp's SEO Tips</p>
-                                <p>1 day ago</p>
+                            <div class="activityInfo">
+                                <img src="images/member-4.jpg" class="memberImage" alt="Dan Oliver Profile image">
+                                <div class="activityText">
+                                    <p>Dan Oliver posted YourApp's SEO Tips</p>
+                                    <p>1 day ago</p>
+                                </div>
                             </div>
                         </div>
                     </section>
                     <!-- Message area -->
-                    <section class="message">
+                    <section class="message white">
                         <h3>Message User</h3>
-                        <form class="widgetContainer">
-                            <input type="text" placeholder="Search for User" class="formField" id="userField">
+                        <form class="widgetContainer" autocomplete="off" method="POST">
+                            <input type="text" placeholder="Search for User" class="formField" name="userName" id="userField">
+                            <ul id="userSearch"></ul>
                             <textarea placeholder="Message for User" class="formArea" id="messageField"></textarea>
                             <button class="buttonPrimary" id="send">Send</button>
                         </form>
                     </section>
                     <!-- Settings -->
-                    <section class="settings">
-                        <h3>Settings</h3>
-                        <div class="settingsToggle">
-                            <div class="settingsItem">
-                              <p>Send Email notifications</p>
-                              <div class="switch">
-                                <input type="radio" name="email_settings_switch" id="email_on">
-                                <label for="email_on" class="on">OFF</label>
-                                <input type="radio" name="email_settings_switch" id="email_off" checked>
-                                <label for="email_off" class="off">ON</label>
-                                <div class="switchCircle"></div>
-                              </div>
-                              <div class="settingsItem">
-                                <p>Set Profile to Public</p>
-                                <div class="switch">
-                                  <input type="radio" name="privacy_settings_switch" id="public_on">
-                                  <label for="public_on" class="on">OFF</label>
-                                  <input type="radio" name="privacy_settings_switch" id="public_off" checked>
-                                  <label for="public_off" class="off">ON</label>
-                                  <div class="switchCircle"></div>
-                                </div>
-                              </div> 
-                            </div> 
+                    <section class="settings white" id="settings">
+                        <h3 class = 'section-heading'>Settings</h3>
+
+                        <!-- on off switch -->
+                       <div id = 'toggle-container'>
+                        <label class="switch-light switch-material" onclick="">
+                          <input type="checkbox">
+                          <strong>
+                            Send Email notification
+                          </strong>
+                          <span>
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                          </span>
+                      </label>
+                            <label class="switch-light switch-material" onclick="">
+                                <input type="checkbox">
+                                <strong>
+                                  Set profile to public
+                                </strong>
+                                <span>
+                                  <span>Off</span>
+                                  <span>On</span>
+                                  <a></a>
+                                </span>
+                              </label>
+                            </div>
                 
                             <select class="settingsTimezone" name="timezone" id="timezone">
                               <option selected disabled>Select Timezone</option>

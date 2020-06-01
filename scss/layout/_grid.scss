@@ -28,6 +28,7 @@ main {
     grid-area: main;
     grid-template-columns: 100%;
     grid-template-rows: auto;
+    // grid-gap: 5px;
     grid-template-areas: 
     "dashtop"
     "alertbar"
@@ -67,13 +68,6 @@ main {
     }
     
 }
-.social {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "social"
-    "socialbox";
-}
-
 
 .headline {
     grid-area: headline;
@@ -113,7 +107,7 @@ main {
 .widgetContainerFull {
     grid-area: trafficchart;
 }
-.alertBar {
+.alert {
     grid-area: alertbar;
 }
 .daily {
@@ -125,9 +119,7 @@ main {
 .social {
     grid-area: social;
 }
-.socialContainer {
-    grid-area: socialbox;
-}
+
 
 .socialImage{
     grid-area: siteicon;
@@ -140,14 +132,24 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     justify-items: center;
+    grid-gap: 5px;
     grid-template-areas:
     "members1"
     "members2"
     "members3"
     "members4";
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 5px;
+        grid-template-areas:
+        "members1 members2"
+        "members3 members4";
+    }
 }
 .members {
     grid-area: members1;
+
 }
 .activity {
     grid-area: members2;
