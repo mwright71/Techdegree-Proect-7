@@ -1359,6 +1359,7 @@ nav img {
 
 .notifyBell:hover {
   animation: shake 1s backwards;
+  cursor: pointer;
 }
 
 .notifications {
@@ -1398,6 +1399,10 @@ nav img {
   right: -5px;
 }
 
+.notifications li .close:hover {
+  cursor: pointer;
+}
+
 .notifications a {
   color: #ebfafa;
   font-size: 0.75rem;
@@ -1423,6 +1428,10 @@ nav img {
   position: absolute;
   top: 17px;
   right: 13px;
+}
+
+.alertClose:hover {
+  cursor: pointer;
 }
 
 .profileInfo {
@@ -1490,6 +1499,10 @@ nav img {
   color: #fff;
   border-radius: 10px;
   outline: none;
+}
+
+.timeFrame:hover {
+  cursor: pointer;
 }
 
 .widgetContainerFull {

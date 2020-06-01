@@ -150,44 +150,6 @@ searchResults.addEventListener('click', (e) => {
   
 });
 
-// Local Storage
-// const emailOn = document.getElementById('email_on');
-// const emailOff = document.getElementById('email_off');
-// const publicOn = document.getElementById('public_on');
-// const publicOff = document.getElementById('public_off');
-// const timezone = document.getElementById('timezone');
-// const buttonSave = document.getElementById('save');
-// const buttonCancel = document.getElementById('cancel');
-// const settingsSection = document.getElementById('settings')
-// const switchButtons = document.querySelectorAll('.switch');
-// const switchCircles = document.querySelectorAll('.switchCircle');
-// const body = document.querySelector('body');
-// const content = document.querySelector('.gridContainer');
-
-// buttonSave.addEventListener('click', () => {
-//     let emailChecked = emailOn.checked;
-//     let publicChecked = publicOn.checked;
-//     let selectTimezone = timezone.selectedIndex;
-//     const popUpText = `<div class="popup__msg"><p>Your settings have been saved!</p><button class="popup__close">Close</button></div>`;
-//     const popUp = document.createElement('DIV');
-  
-//     popUp.className = 'popup__overlay';
-//     popUp.innerHTML = popUpText;
-//     body.insertBefore(popUp, content);
-//     if (emailChecked) { // if email button is checked 'on'
-//     localStorage.setItem(emailChecked, true); // save email key as true
-//   } else { // else if checked 'off'
-//     localStorage.setItem('email', false); // save key as false
-//   }
-//   if (publicChecked) { // if set profile public button is checked 'on'
-//     localStorage.setItem('set-public', true); // save set profile public key as true
-//   } else { // else if checked 'off'
-//     localStorage.setItem('set-public', false); // save key as false
-//   }
-//   // save timezone key as selected option
-//   localStorage.setItem('timezone', selectTimezone);
-
-// });
 
 const emailToggle = document.querySelectorAll('#toggle-container input[type="checkbox"]')[0];
 const profileToggle = document.querySelectorAll('#toggle-container input[type="checkbox"]')[1];
