@@ -4,7 +4,6 @@ header,
 .trafficNav,
 .icon,
 .alertBar,
-.socialContainer,
 .socialBox,
 .membersContainer,
 .memberInfo,
@@ -18,7 +17,8 @@ header,
 .widgetContainer,
 .settingsItem,
 .emailItem,
-.profileItem {
+.profileItem,
+#toggle-container .switch-light {
     display: flex;
 }
 header {
@@ -49,15 +49,7 @@ header {
 .alertBar {
     justify-content: space-between;
 }
-.socialContainer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @media (min-width: 768px){
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
+
 .membersContainer {
     justify-content: space-between;
 }
@@ -78,4 +70,7 @@ header {
 }
 .settingsItem {
     align-content: flex-start;
+}
+#toggle-container .switch-light{
+    flex-direction: column;
 }

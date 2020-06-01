@@ -5,7 +5,8 @@ nav,
 .traffic,
 .trafficHeader,
 .social,
-.membersArea {
+.membersArea,
+.socialContainer {
     display: grid;
 }
 header {
@@ -68,7 +69,28 @@ main {
     }
     
 }
-
+.twitter {
+    grid-area: twitter;
+}
+.facebook {
+    grid-area: facebook;
+}
+.google {
+    grid-area: google;
+}
+.socialContainer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-template-areas:
+    "twitter"
+    "facebook"
+    "google";
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "twitter facebook google";
+    }
+}
 .headline {
     grid-area: headline;
 }

@@ -200,19 +200,19 @@ nav img {
 .icon {
     fill: white;
     padding: 5px;
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     margin: 10px;
     text-align: center;
     transform-origin: 50% 50%;
     transform-box: fill-box;
     @media (min-width: 768px) {
-        width: 65px;
-        height: 65px;
+        width: 45px;
+        height: 45px;
     }
     @media (min-width: 768px) {
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
     }
 }
 
@@ -228,9 +228,23 @@ nav img {
     font-size: 18px;
 }
 
+.socialContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-template-areas:
+    "twitter"
+    "facebook"
+    "google";
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "twitter facebook google";
+    }
+}
 .socialBox {
     background-color: $sec-background;
-    width: 70%;
+    width: 90%;
     border: 1px solid $main;
     border-radius: 5px;
     margin: 15px;
@@ -242,19 +256,19 @@ nav img {
 }
 .socialText h4 {
     color: $main;
-    font-size: 1.2rem;
-    @media (min-width: 768px){
-        font-size: 1.8rem;
+    font-size: .95rem;
+    @media (min-width: 1024px){
+        font-size: 1rem;
     }
 }
 .socialText p {
     color: brown;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     @media (min-width: 768px){
-        font-size: 2.5rem;
+        // font-size: 2rem;
     }
     @media (min-width: 1024px){
-        font-size: 4rem;
+        font-size: 2rem;
     }
 }
 .socialImage {
@@ -263,11 +277,9 @@ nav img {
     margin: 15px;
 }
 .members,
-.activity,
+.activity, 
 .social {
     width: 100%;
-    // margin: 15px;
-    // border-bottom: 2px solid $main;
 }
 .membersContainer,
 .activityContainer {
@@ -326,15 +338,16 @@ nav img {
 .message,
 .settings {
     width: 100%;
-    // @media (min-width: 768px) {
-    //     width: 45vw;
-    // }
 }
 
 .formField,
 .settingsTimezone {
     height: 50px;
     margin-bottom: 25px;
+}
+.settingsTimezone {
+    width: 90%;
+    margin: 0 auto;
 }
 .formArea {
     height: 175px;
@@ -373,6 +386,12 @@ nav img {
 .profileItem {
     margin: 20px 0 50px 0;
 }
+#toggleContainer,
+.widgetContainer,
+.settingsButtons,
+.switch-light {
+    margin: 15px;
+}
 
 .emailItem p,
 .profileItem p {
@@ -409,21 +428,16 @@ li {
     margin-top: 15px;
 }
 
-
-
-
-
-
 #toggle-container .switch-light{
     display:flex;
-    margin-bottom:30px;
+    margin-bottom: 55px;
     flex-direction: column;
-  }
-  
-  #toggle-container .switch-light strong{
+}
+
+#toggle-container .switch-light strong{
     margin-bottom:5px;
-  }
-  
-  select{
+}
+
+select{
     width:100%;
-  }
+}
